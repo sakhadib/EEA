@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Two Emojis of Difference · MRL @ EMNLP 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="_ds/organic-b2c60a3d-41d6-41f0-98c4-cf3a2cb07add/styles.css">
+<script src="_ds/organic-b2c60a3d-41d6-41f0-98c4-cf3a2cb07add/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)}
+a{color:var(--color-accent-700);text-underline-offset:3px}
+a:hover{color:var(--color-accent-800)}
+</style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(10px)">
+  <nav style="max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <a href="#top" style="font-family:var(--font-heading);font-size:20px;color:var(--color-text);text-decoration:none">Two Emojis of Difference</a>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:15px;font-weight:600">
+      <a href="#findings" style="color:var(--color-text);text-decoration:none">Findings</a>
+      <a href="#leaderboard" style="color:var(--color-text);text-decoration:none">Leaderboard</a>
+      <a href="#ead" style="color:var(--color-text);text-decoration:none">EAD</a>
+      <a href="#recommendations" style="color:var(--color-text);text-decoration:none">Recommendations</a>
+      <a href="#cite" style="color:var(--color-text);text-decoration:none">Cite</a>
+    </div>
+  </nav>
+</header>
+
+<section id="top" data-screen-label="Hero" style="position:relative;max-width:1120px;margin:0 auto;padding:72px 24px 88px">
+  <div style="position:absolute;right:-140px;top:-40px;width:460px;height:460px;border-radius:50%;background:var(--color-accent-2-200);z-index:0"></div>
+  <div style="position:absolute;right:120px;top:300px;width:170px;height:170px;border-radius:50%;background:var(--color-accent-200);z-index:0"></div>
+  <div style="position:relative;z-index:1;max-width:780px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="tag tag-accent-2">MRL Workshop @ EMNLP 2026</span>
+      <span class="tag tag-neutral">Budapest, Hungary</span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(40px,6.4vw,76px);line-height:1.02;margin:0;letter-spacing:-0.01em;text-wrap:balance">Two Emojis of Difference</h1>
+    <p style="font-size:clamp(20px,2.4vw,26px);line-height:1.35;margin:-8px 0 0;font-weight:500;color:var(--color-neutral-800);text-wrap:pretty">What Multilingual Affective Generation Benchmarks Actually Measure</p>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="display:flex;gap:22px;flex-wrap:wrap;font-size:19px;font-weight:600">
+        <span>Fardeen Sadab*</span>
+        <span>Adib Sakhawat*</span>
+      </div>
+      <div style="font-size:15px;color:var(--color-neutral-700)">Department of Computer Science and Engineering, Islamic University of Technology, Dhaka, Bangladesh</div>
+      <div style="font-size:14px;color:var(--color-neutral-700)">* Equal contribution</div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn btn-primary" href="https://arxiv.org/pdf/2609.29445" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap;flex-shrink:0">Paper PDF</a>
+      <a class="btn btn-secondary" href="https://arxiv.org/abs/2609.29445" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap;flex-shrink:0">arXiv 2609.29445</a>
+      <a class="btn btn-secondary" href="https://github.com/sakhadib/EEA" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap;flex-shrink:0">Code</a>
+      <a class="btn btn-ghost" href="#cite" style="text-decoration:none;white-space:nowrap;flex-shrink:0">BibTeX</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Abstract" style="max-width:1120px;margin:0 auto;padding:0 24px 88px">
+  <div style="background:var(--color-surface);border-radius:var(--radius-lg);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px">
+    <h2 style="font-family:var(--font-heading);font-weight:400;font-size:34px;margin:0;line-height:1.1">Abstract</h2>
+    <p style="grid-column:span 2;min-width:0;margin:0;font-size:18px;line-height:1.65;text-wrap:pretty;max-width:68ch">We audit a multilingual affective generation benchmark—eight instruction-tuned LLMs producing emoji summaries for 17,100 Bangla, English and Hindi sentences, with 6,960 human judgements—and find its headline conclusions to be artefacts of the measurement instrument rather than properties of the systems. Treating annotators as a random rather than a fixed factor, no system differs significantly from any other (<em>F</em>(7, 14) = 0.59, <em>p</em> = 0.76), although the conventional analysis declares 19 of 28 pairwise differences significant. Annotator identity explains far more rating variance than system identity, and the winning system changes whenever any single annotator is removed. The ordering that does emerge tracks output length: mean emoji count explains 78.7% of between-system variance, and a within-item length-matched comparison over 2,599 pairs reverses the leaderboard. We further show that cross-provider anisotropy differences vanish under mean-centring, that per-language token costs change sign with the normalising unit, and that multi-view row-wise splits inflate macro-F1 by 3.1 points and change the top-ranked system. In place of preference scoring we propose emoji–affect decodability, a reference-based probe whose rankings are stable to ±0.003 macro-F1 across seeds.</p>
+  </div>
+</section>
+
+<section data-screen-label="Setup" style="max-width:1120px;margin:0 auto;padding:0 24px 96px;display:flex;flex-direction:column;gap:32px">
+  <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1">The benchmark</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-family:var(--font-heading);font-size:44px;color:var(--color-accent-700);line-height:1">17,100</div>
+      <div style="font-size:16px;line-height:1.45">sentences in Bangla (5,813), English (6,547) and Hindi (4,740)</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-family:var(--font-heading);font-size:44px;color:var(--color-accent-700);line-height:1">8</div>
+      <div style="font-size:16px;line-height:1.45">instruction-tuned LLMs, each asked for one to five emojis</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-family:var(--font-heading);font-size:44px;color:var(--color-accent-700);line-height:1">6,960</div>
+      <div style="font-size:16px;line-height:1.45">human judgements: 290 sentences × 8 systems × 3 annotators, fully crossed</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-family:var(--font-heading);font-size:44px;color:var(--color-accent-700);line-height:1">5</div>
+      <div style="font-size:16px;line-height:1.45">commercial sentence encoders for the geometry analyses</div>
+    </div>
+  </div>
+  <sc-if value="{{ showPrompt }}" hint-placeholder-val="{{ true }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px;align-items:start">
+      <p style="margin:0;font-size:17px;line-height:1.6;text-wrap:pretty;max-width:52ch">Every system received the same English-language prompt for all three languages, with temperature 0.7, max_tokens 50 and no system prompt. The models are never shown the emotion label and are never asked to predict one: this is a study of affective expression through a constrained symbolic channel, not of emotion classification.</p>
+      <pre style="margin:0;background:var(--color-accent-2-100);color:var(--color-accent-2-900);border-radius:var(--radius-md);padding:24px 26px;font-size:14px;line-height:1.6;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace">You MUST respond with 1-5 emojis
+representing the emotion in this
+sentence.
+CRITICAL: Your response MUST contain
+emojis. Empty responses are NOT allowed.
+Do NOT include any text, words, or
+explanations - ONLY emojis.
+Sentence: {sentence}
+Emojis (REQUIRED):</pre>
+    </div>
+  </sc-if>
+</section>
+
+<section id="findings" data-screen-label="Findings" style="max-width:1120px;margin:0 auto;padding:0 24px 96px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+    <span class="tag tag-accent" style="align-self:flex-start">Finding 1</span>
+    <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1;text-wrap:balance">Preference scores do not identify a winner</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;text-wrap:pretty">The choice of error term decides the result. Tested against the residual, the near-universal practice in NLP, the system effect looks overwhelming. Tested against the system×rater interaction, the correct term when annotators are a sample from a population, it vanishes. Annotators disagree about systems more than systems differ.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+    <div style="background:var(--color-surface);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:14px;font-weight:600;color:var(--color-neutral-700)">Conventional analysis</div>
+      <div style="font-family:var(--font-heading);font-size:38px;line-height:1.05"><em style="font-style:normal">F</em>(7, 4046) = 18.62</div>
+      <div style="font-size:16px;line-height:1.5"><em>p</em> &lt; 10<sup>−16</sup>; 19 of 28 pairwise differences significant</div>
+    </div>
+    <div style="background:var(--color-accent-2-200);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:14px;font-weight:600;color:var(--color-accent-2-800)">Annotators as a random factor</div>
+      <div style="font-family:var(--font-heading);font-size:38px;line-height:1.05;color:var(--color-accent-2-900)"><em style="font-style:normal">F</em>(7, 14) = 0.59</div>
+      <div style="font-size:16px;line-height:1.5;color:var(--color-accent-2-900)"><em>p</em> = 0.76; zero pairwise differences significant</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h3 style="font-family:var(--font-heading);font-weight:400;font-size:26px;margin:0">Who rates matters more than what is rated</h3>
+      <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">On the common sum-of-squares scale, the annotator main effect accounts for 22.1% of the total and the system for 0.7%. Bias-sensitive agreement is near zero: Krippendorff’s α<sub>ordinal</sub> = 0.014, ICC(2,1) = 0.116, despite Pearson correlations of 0.17–0.18.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+        <sc-for list="{{ variance }}" as="v" hint-placeholder-count="6">
+          <div style="display:grid;grid-template-columns:96px minmax(0,1fr) 48px;gap:12px;align-items:center;font-size:14px">
+            <span style="font-weight:600">{{ v.label }}</span>
+            <div style="height:14px;border-radius:999px;background:var(--color-neutral-200);overflow:hidden">
+              <div style="height:100%;border-radius:999px;background:{{ v.color }};width:{{ v.width }}"></div>
+            </div>
+            <span style="font-variant-numeric:tabular-nums;text-align:right">{{ v.pct }}</span>
+          </div>
+        </sc-for>
+        <div style="font-size:13px;color:var(--color-neutral-700)">Random-effect variance components (% of variance). Annotator-related terms in terracotta.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h3 style="font-family:var(--font-heading);font-weight:400;font-size:26px;margin:0">The winner depends on who is on the panel</h3>
+      <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">Dropping one annotator changes the top-ranked system in two of three cases. Claude-3-Haiku ranges from first to last.</p>
+      <table class="table" style="width:100%">
+        <thead><tr><th style="text-align:left">Panel</th><th style="text-align:left">Top system</th><th style="text-align:right">ρ w/ full</th><th style="text-align:right">Claude rank</th></tr></thead>
+        <tbody>
+          <tr><td>All three</td><td>Gemma-3-27B</td><td style="text-align:right">—</td><td style="text-align:right">3</td></tr>
+          <tr><td>−A1</td><td>Claude-3-Haiku</td><td style="text-align:right">0.55</td><td style="text-align:right">1</td></tr>
+          <tr><td>−A2</td><td>Gemma-3-27B</td><td style="text-align:right">0.90</td><td style="text-align:right">4</td></tr>
+          <tr><td>−A3</td><td>Mistral-Large</td><td style="text-align:right">0.62</td><td style="text-align:right">8</td></tr>
+        </tbody>
+      </table>
+      <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">The decision study gives <em>G</em> = 0.336 for the current design. Reaching <em>G</em> ≥ 0.8 needs 27 annotators at 290 items. With three annotators, no number of sentences reaches it: reliability can only be bought with more annotators.</p>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboard" data-screen-label="Leaderboard" style="max-width:1120px;margin:0 auto;padding:0 24px 96px">
+  <div style="background:var(--color-surface);border-radius:var(--radius-lg);padding:clamp(24px,4.5vw,52px);display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <span class="tag tag-accent" style="align-self:flex-start">Finding 2</span>
+      <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1;text-wrap:balance">The ratings track output length</h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;text-wrap:pretty">Mean emoji count predicts MOS with ρ = 0.90, explaining 78.7% of between-system variance; each extra emoji is worth 0.159 MOS points. The full spread between best and worst system is 0.341 points, slightly more than two emojis’ worth of length. Re-sort the leaderboard to compare.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+        <button class="{{ m.cls }}" onClick="{{ m.select }}" style="white-space:nowrap;flex-shrink:0">{{ m.label }}</button>
+      </sc-for>
+    </div>
+    <p style="margin:0;font-size:15px;line-height:1.55;color:var(--color-neutral-800);max-width:70ch">{{ metricNote }}</p>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="display:grid;grid-template-columns:32px minmax(110px,170px) minmax(0,1fr) 56px 72px;gap:14px;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--color-neutral-700);padding:0 4px">
+        <span>#</span><span>System</span><span></span><span style="text-align:right">Value</span><span style="text-align:right">vs MOS</span>
+      </div>
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:32px minmax(110px,170px) minmax(0,1fr) 56px 72px;gap:14px;align-items:center;padding:10px 4px;border-radius:var(--radius-md);background:{{ r.bg }}">
+          <span style="font-family:var(--font-heading);font-size:20px">{{ r.rank }}</span>
+          <span style="font-weight:600;font-size:15px;min-width:0;overflow-wrap:anywhere">{{ r.name }}</span>
+          <div style="height:16px;border-radius:999px;background:color-mix(in srgb, var(--color-text) 8%, transparent);overflow:hidden">
+            <div style="height:100%;border-radius:999px;background:{{ r.barColor }};width:{{ r.width }};transition:width .45s cubic-bezier(.3,.7,.2,1)"></div>
+          </div>
+          <span style="font-variant-numeric:tabular-nums;text-align:right;font-size:15px">{{ r.value }}</span>
+          <span style="font-variant-numeric:tabular-nums;text-align:right;font-size:14px;font-weight:600;color:{{ r.deltaColor }}">{{ r.delta }}</span>
+        </div>
+      </sc-for>
+      <div style="font-size:13px;color:var(--color-neutral-700);padding:8px 4px 0">Bars span the observed range of each metric. Data from Table 3 of the paper.</div>
+    </div>
+  </div>
+</section>
+
+<section id="ead" data-screen-label="EAD" style="max-width:1120px;margin:0 auto;padding:0 24px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <span class="tag tag-accent-2" style="align-self:flex-start">Proposal</span>
+    <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1;text-wrap:balance">Emoji–affect decodability</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;text-wrap:pretty">EAD(<em>g</em>, <em>L</em>) is the 5-fold cross-validated macro-F1 of an ℓ2-regularised multinomial logistic regression over sublinear TF-IDF features of the emojis generator <em>g</em> emits, predicting the corpus emotion label. It measures how much of the corpus’s affective distinction survives compression into the emoji channel, using labels the corpora already carry and no annotators.</p>
+    <p style="margin:0;font-size:17px;line-height:1.6;text-wrap:pretty">A generator that emits the same three emojis for everything scores at the floor regardless of how pleasant those emojis are.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="background:var(--color-accent-2-100);border-radius:var(--radius-lg);padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-weight:700;color:var(--color-accent-2-800)">Stable</div>
+      <div style="font-size:16px;line-height:1.55">Largest per-system SD across ten seeds is 0.0033 macro-F1; bootstrap CIs separate systems into three tiers.</div>
+    </div>
+    <div style="background:var(--color-accent-2-100);border-radius:var(--radius-lg);padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-weight:700;color:var(--color-accent-2-800)">Language-specific</div>
+      <div style="font-size:16px;line-height:1.55">Transferring a decoder across languages costs 0.252 macro-F1 despite &gt;99.7% vocabulary overlap. Models emit the same emojis across languages but use them to mean different things.</div>
+    </div>
+    <div style="background:var(--color-accent-2-100);border-radius:var(--radius-lg);padding:24px 28px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-weight:700;color:var(--color-accent-2-800)">Competitive with embeddings</div>
+      <div style="font-size:16px;line-height:1.55">At matched sample size in Bangla, the best emoji channel reaches 0.673 macro-F1 against 0.595 for the best sentence embedding.</div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Corrections" style="max-width:1120px;margin:0 auto;padding:0 24px 96px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+    <span class="tag tag-accent" style="align-self:flex-start">Finding 3</span>
+    <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1;text-wrap:balance">Three more claims that do not survive</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px">
+    <article class="card" style="display:flex;flex-direction:column;gap:12px">
+      <div class="card-kicker">Geometry</div>
+      <div class="card-title">Anisotropy gaps are a mean offset</div>
+      <div class="card-body">Raw anisotropy ranges from 0.149 to 0.700 across providers. After subtracting the global mean, every model lies in [−0.0008, 0.0013]. Language separability on non-parallel corpora is not cross-lingual alignment.</div>
+    </article>
+    <article class="card" style="display:flex;flex-direction:column;gap:12px">
+      <div class="card-kicker">Cost</div>
+      <div class="card-title">Token premia change sign with the unit</div>
+      <div class="card-body">Per source byte, Bangla is the cheapest language (1.108 tokens). Per character, it costs 2.0× English, because Bangla averages 2.64 UTF-8 bytes per character.</div>
+    </article>
+    <article class="card" style="display:flex;flex-direction:column;gap:12px">
+      <div class="card-kicker">Leakage</div>
+      <div class="card-title">Row-wise splits inflate macro-F1 by 3.1 points</div>
+      <div class="card-body">A naive 80/20 split gives 0.630 against 0.598 for a split grouped by source item, and the top-ranked system changes from Mistral-Large to Gemma-3-27B.</div>
+    </article>
+  </div>
+</section>
+
+<section id="recommendations" data-screen-label="Recommendations" style="max-width:1120px;margin:0 auto;padding:0 24px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px;align-items:start">
+  <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(30px,4vw,44px);margin:0;line-height:1.1">Recommendations</h2>
+  <ol style="grid-column:span 2;min-width:0;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:22px">
+    <sc-for list="{{ recs }}" as="rec" hint-placeholder-count="6">
+      <li style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;align-items:start">
+        <span style="width:48px;height:48px;border-radius:50%;background:var(--color-accent-200);color:var(--color-accent-800);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:20px">{{ rec.n }}</span>
+        <div style="display:flex;flex-direction:column;gap:4px;padding-top:4px">
+          <div style="font-weight:700;font-size:17px">{{ rec.title }}</div>
+          <div style="font-size:16px;line-height:1.55;color:var(--color-neutral-800);text-wrap:pretty">{{ rec.body }}</div>
+        </div>
+      </li>
+    </sc-for>
+  </ol>
+</section>
+
+<section id="cite" data-screen-label="Cite" style="max-width:1120px;margin:0 auto;padding:0 24px 96px">
+  <div style="background:var(--color-text);color:var(--color-bg);border-radius:var(--radius-lg);padding:clamp(24px,4.5vw,48px);display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+      <h2 style="font-family:var(--font-heading);font-weight:400;font-size:36px;margin:0;line-height:1.1">Cite this work</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ bibTabs }}" as="t" hint-placeholder-count="2">
+          <button onClick="{{ t.select }}" style="font-family:var(--font-body);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;border:2px solid var(--color-accent-400);cursor:pointer;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+        </sc-for>
+        <button onClick="{{ copyBib }}" style="font-family:var(--font-body);font-size:14px;font-weight:700;padding:8px 18px;border-radius:999px;border:2px solid var(--color-accent-400);background:var(--color-accent-400);color:var(--color-accent-900);cursor:pointer" style-hover="background:var(--color-accent-300)">{{ copyLabel }}</button>
+      </div>
+    </div>
+    <pre style="margin:0;background:color-mix(in srgb, var(--color-bg) 8%, transparent);border-radius:var(--radius-md);padding:22px 24px;font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--color-bg)">{{ bibtex }}</pre>
+  </div>
+</section>
+
+<footer style="max-width:1120px;margin:0 auto;padding:0 24px 56px;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;font-size:14px;color:var(--color-neutral-700)">
+  <span>Fardeen Sadab and Adib Sakhawat · Islamic University of Technology</span>
+  <div style="display:flex;gap:18px;flex-wrap:wrap">
+    <a href="https://arxiv.org/abs/2609.29445" target="_blank" rel="noopener">arXiv</a>
+    <a href="https://arxiv.org/pdf/2609.29445" target="_blank" rel="noopener">PDF</a>
+    <a href="https://github.com/sakhadib/EEA" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:sakhadib@gmail.com">Contact</a>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultSort&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;win&quot;,&quot;mos&quot;,&quot;emojis&quot;,&quot;ead&quot;],&quot;default&quot;:&quot;win&quot;,&quot;tsType&quot;:&quot;'win'|'mos'|'emojis'|'ead'&quot;},&quot;showPrompt&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const SYS = [
+  { name: 'Gemma-3-27B', mos: 3.667, emojis: 4.95, ead: 0.653, win: 0.543 },
+  { name: 'Mistral-Large', mos: 3.638, emojis: 4.87, ead: 0.639, win: 0.506 },
+  { name: 'Claude-3-Haiku', mos: 3.579, emojis: 4.92, ead: 0.584, win: 0.499 },
+  { name: 'GPT-4.1-nano', mos: 3.516, emojis: 4.55, ead: 0.562, win: 0.428 },
+  { name: 'DeepSeek-V3.2', mos: 3.454, emojis: 3.45, ead: 0.560, win: 0.541 },
+  { name: 'Gemini-2.0-Flash', mos: 3.443, emojis: 2.67, ead: 0.657, win: 0.603 },
+  { name: 'Qwen3-VL-235B', mos: 3.421, emojis: 3.88, ead: 0.597, win: 0.422 },
+  { name: 'Grok-4-Fast', mos: 3.325, emojis: 2.58, ead: 0.655, win: 0.517 },
+];
+const METRICS = {
+  mos: { label: 'Raw MOS', lo: 3.2, hi: 3.7, dp: 3, note: 'Mean opinion score from three Bangla annotators on a 1–5 scale. This is the leaderboard the benchmark originally reported.' },
+  emojis: { label: 'Emojis per output', lo: 2, hi: 5, dp: 2, note: 'Mean number of emojis emitted. Its ordering is nearly the MOS ordering (ρ = 0.90): the three longest-output systems top the preference board.' },
+  win: { label: 'Length-matched win rate', lo: 0.4, hi: 0.62, dp: 3, note: 'Within-item comparisons restricted to pairs that emitted the same number of emojis (2,599 pairs). Correlates with MOS at ρ = 0.12. Gemini-2.0-Flash moves from sixth to first; Grok-4-Fast from last to fourth.' },
+  ead: { label: 'EAD (Bangla)', lo: 0.54, hi: 0.67, dp: 3, note: 'Emoji–affect decodability, macro-F1. Reference-based and annotator-free; ρ = −0.19 with MOS.' },
+};
+const mosRank = {};
+[...SYS].sort((a, b) => b.mos - a.mos).forEach((s, i) => { mosRank[s.name] = i + 1; });
+const VAR = [['rater', 29.1, 1], ['residual', 32.6, 0], ['item×rater', 22.9, 1], ['item', 7.3, 0], ['item×sys', 4.6, 0], ['sys×rater', 3.5, 1]];
+const RECS = [
+  ['Report agreement with a bias-sensitive coefficient.', 'Pearson correlation between annotators is not agreement. Report Krippendorff’s α or an ICC with a bootstrap CI, and report annotator mean and SD separately.'],
+  ['Treat annotators as a random factor.', 'If the claim is about systems in general rather than about three specific people, the error term must include the system×annotator interaction.'],
+  ['Run a decision study before scaling up collection.', 'A small fully crossed pilot is enough to estimate the system×annotator variance and hence the panel size the intended claim requires.'],
+  ['Length-match, do not length-adjust.', 'Report a within-item comparison restricted to outputs of equal length alongside the raw score.'],
+  ['Report a reference-based metric next to preference.', 'EAD or an analogue gives a reproducible number that does not move when the panel changes.'],
+  ['Fix the geometry, cost and split hygiene.', 'Centre embeddings before reporting anisotropy; do not describe non-parallel corpora as evidence of cross-lingual alignment; normalise token counts by characters and disclose the bytes-per-character ratio; split multi-view tables by source item.'],
+];
+const BIB = {
+  workshop: `@inproceedings{sadab2026twoemojis,
+  title     = {Two Emojis of Difference: What Multilingual Affective Generation Benchmarks Actually Measure},
+  author    = {Sadab, Fardeen and Sakhawat, Adib},
+  booktitle = {Proceedings of the Workshop on Multilingual Representation Learning (MRL) at EMNLP 2026},
+  address   = {Budapest, Hungary},
+  year      = {2026}
+}`,
+  preprint: `@misc{sadab2026twoemojis_arxiv,
+  title         = {Two Emojis of Difference: What Multilingual Affective Generation Benchmarks Actually Measure},
+  author        = {Fardeen Sadab and Adib Sakhawat},
+  year          = {2026},
+  eprint        = {2609.29445},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2609.29445}
+}`,
+};
+class Component extends DCLogic {
+  state = { sort: null, bib: 'workshop', copied: false };
+  copy = () => {
+    const t = BIB[this.state.bib];
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).catch(() => {
+      const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {} ta.remove();
+    });
+    this.setState({ copied: true });
+    clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: false }), 1600);
+  };
+  renderVals() {
+    const sort = this.state.sort || this.props.defaultSort || 'win';
+    const M = METRICS[sort];
+    const rows = [...SYS].sort((a, b) => b[sort] - a[sort]).map((s, i) => {
+      const v = s[sort];
+      const pct = Math.max(4, Math.min(100, ((v - M.lo) / (M.hi - M.lo)) * 100));
+      const d = mosRank[s.name] - (i + 1);
+      const hl = s.name === 'Gemini-2.0-Flash' || s.name === 'Gemma-3-27B';
+      return {
+        rank: i + 1, name: s.name, value: v.toFixed(M.dp), width: pct + '%',
+        barColor: sort === 'ead' ? 'var(--color-accent-2-500)' : 'var(--color-accent)',
+        bg: hl ? 'color-mix(in srgb, var(--color-bg) 70%, transparent)' : 'transparent',
+        delta: sort === 'mos' ? '' : d > 0 ? '↑ ' + d : d < 0 ? '↓ ' + -d : '=',
+        deltaColor: d > 0 ? 'var(--color-accent-2-700)' : d < 0 ? 'var(--color-accent-700)' : 'var(--color-neutral-700)',
+      };
+    });
+    return {
+      showPrompt: this.props.showPrompt ?? true,
+      variance: VAR.map(([label, p, a]) => ({ label, pct: p.toFixed(1), width: (p / 35) * 100 + '%', color: a ? 'var(--color-accent)' : 'var(--color-accent-2-500)' })),
+      metrics: Object.entries(METRICS).map(([k, m]) => ({ label: m.label, cls: 'btn ' + (k === sort ? 'btn-primary' : 'btn-secondary'), select: () => this.setState({ sort: k }) })),
+      metricNote: M.note,
+      rows,
+      recs: RECS.map(([title, body], i) => ({ n: i + 1, title, body })),
+      bibTabs: [['workshop', 'MRL 2026'], ['preprint', 'arXiv preprint']].map(([k, label]) => {
+        const on = this.state.bib === k;
+        return { label, bg: on ? 'var(--color-bg)' : 'transparent', fg: on ? 'var(--color-text)' : 'var(--color-bg)', select: () => this.setState({ bib: k, copied: false }) };
+      }),
+      bibtex: BIB[this.state.bib],
+      copyBib: this.copy,
+      copyLabel: this.state.copied ? 'Copied' : 'Copy BibTeX',
+    };
+  }
+}
+</script>
+</body>
+</html>
